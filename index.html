@@ -707,21 +707,6 @@ function renderStories(){
  });
 }
 renderStories();
-function renderStories(){
- const grid=document.getElementById('storyGrid');
- stories.forEach((s,i)=>{
-  const card=document.createElement('article');card.className='story';
-  const visual=document.createElement('div');visual.className='story-visual';
-  if(s.img){const img=document.createElement('img');img.src=s.img;img.alt='Современный вид: '+s.title;img.loading='lazy';visual.appendChild(img);}
-  const lab=document.createElement('div');lab.className='story-label';lab.textContent=s.place;visual.appendChild(lab);
-  const body=document.createElement('div');body.className='story-body';
-  body.innerHTML='<div class="small-caps">История '+String(i+1).padStart(2,'0')+'</div><h3>'+s.title+'</h3><p>'+s.teaser+'</p><details><summary>Открыть историю</summary><div class="story-more"><p>'+s.body+'</p><div class="story-source">'+s.source+'</div></div></details>';
-  card.appendChild(visual);card.appendChild(body);grid.appendChild(card);
- });
-}
-renderStories();
-
-
 const questions=[
 {cat:"Спасти",q:"Сколько музейных предметов удалось эвакуировать из Гатчинского дворца?",a:["6 500","11 929","12 932","40 765"],correct:1,why:"Из Гатчинского дворца вывезли 11 929 предметов. Более восьми тысяч отправили в Сарапул, около трёх тысяч — в Ленинград."},
 {cat:"Спасти",q:"Что сделали с наиболее ценными античными статуями и скульптурами муз в Павловске?",a:["Перевезли в Кёнигсберг","Укрыли в парке под землёй","Спрятали в подвале дворца и замуровали","Разместили в офицерском казино"],correct:2,why:"В Павловске скульптуры спрятали в подвале дворца, а затем замуровали помещение."},
