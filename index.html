@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#11110f">
-<meta name="description" content="Цифровой музейный проект о судьбе культурного наследия дворцовых пригородов Ленинграда в годы оккупации: утраты, спасение и восстановление на примере Гатчины.">
-<title>За пределами разграбления — цифровой музей</title>
+<meta name="description" content="Истории культурного наследия дворцовых пригородов Ленинграда в годы оккупации: утраты, спасение и восстановление.">
+<title>За пределами разграбления — цифровой музей истории</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -218,6 +218,128 @@ img{max-width:100%;display:block}
  .footer-top,.footer-bottom{flex-direction:column}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
+
+/* Museum visual depth update */
+.hero-meta{margin-top:45px;color:rgba(233,223,201,.54);font-size:9px;letter-spacing:.2em}
+.hero-meta i{font-style:normal;color:var(--gold);padding:0 8px}
+.hero-archive{background:#0a0a08}
+.hero-archive img{object-position:center 45%;filter:brightness(.58) saturate(.62) contrast(1.08);transform:scale(1.02)}
+.hero-archive:after{background:linear-gradient(90deg,var(--bg) 0%,rgba(17,17,15,.16) 35%,rgba(17,17,15,.08) 100%),linear-gradient(0deg,var(--bg) 0%,transparent 46%)}
+.hero-caption small{font:9px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:rgba(233,223,201,.65)}
+.visual-essay{margin-top:76px}
+.visual-essay-head{display:grid;grid-template-columns:.9fr 1.1fr;column-gap:40px;align-items:end;margin-bottom:24px}
+.visual-essay-head .kicker{grid-column:1/-1}
+.visual-essay-head h3{font:500 clamp(32px,4vw,46px)/1 var(--serif);margin:10px 0 0;color:var(--white)}
+.visual-essay-head p{color:var(--muted);font-size:12px;max-width:470px;margin:0}
+.visual-triptych{display:grid;grid-template-columns:1.18fr .82fr .82fr;gap:12px}
+.visual-frame{margin:0;min-width:0;background:#191915;border:1px solid var(--line);position:relative}
+.visual-frame img{width:100%;height:260px;object-fit:cover;filter:brightness(.83) saturate(.78);transition:transform .45s,filter .45s}
+.visual-frame-tall img{height:330px}
+.visual-frame:hover img{filter:brightness(1) saturate(.92);transform:scale(1.015)}
+.visual-frame figcaption{padding:14px 16px 16px;display:flex;flex-direction:column;gap:5px}
+.visual-frame figcaption b{font:500 25px var(--serif);color:var(--gold2)}
+.visual-frame figcaption span{font-size:11px;color:#ddd2bf}
+.visual-frame figcaption small{font-size:9px;color:#817969}
+.story-grid-rich{grid-template-columns:repeat(3,1fr);gap:17px}
+.story-grid-rich .story{overflow:hidden;border-color:rgba(216,192,146,.22)}
+.story-grid-rich .story-visual{height:230px}
+.story-grid-rich .story-visual img{filter:brightness(.74) saturate(.72)}
+.story-grid-rich .story-body{padding:23px;min-height:265px}
+.story-grid-rich .story h3{font-size:28px}
+.photo-credit{font-size:9px;color:#827a6c;margin-top:10px;letter-spacing:.02em}
+.photo-credit a{color:#b6a98f;text-decoration:underline;text-decoration-color:rgba(216,192,146,.22);text-underline-offset:3px}
+.map-infographic{padding:14px 18px 12px;background:radial-gradient(ellipse at 48% 42%,#272a22,#141512 75%)}
+.map-topline{display:flex;justify-content:space-between;color:var(--gold);font-size:9px;letter-spacing:.17em;padding:5px 6px 12px}
+.map-panel svg .water-label{fill:#9ab0a6;font-size:12px;letter-spacing:4px}
+.map-panel svg .city-label{fill:#e9dfc9;font-size:16px;letter-spacing:2px;font-weight:700}
+.map-panel svg .city-sub{fill:#a49c8a;font-size:10px}
+.map-panel svg .pin circle:not(.pin-halo){fill:#d5b679;stroke:#f2e4c9;stroke-width:1.4}
+.map-panel svg .pin-halo{fill:rgba(184,154,96,.15);stroke:rgba(216,192,146,.38);stroke-width:1}
+.map-panel svg .pin.active .pin-halo,.map-panel svg .pin:hover .pin-halo{fill:rgba(184,154,96,.3);stroke:#e4c58e;stroke-width:2}
+.map-panel svg .pin text{fill:#f0e5d1;font-size:12px;font-weight:700;letter-spacing:1.3px}
+.map-panel svg .pin .pin-sub{fill:#a9a18f;font-size:9px;font-weight:400;letter-spacing:.04em}
+.map-panel svg .map-foot{fill:#706c61;font-size:8px;letter-spacing:2px}
+.map-legend{display:flex;gap:18px;flex-wrap:wrap;border-top:1px solid var(--line);padding:11px 5px 2px;color:#8e887a;font-size:9px}
+.map-legend span{display:flex;align-items:center;gap:7px}
+.map-legend i{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.map-stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.map-stats div{padding:18px 20px;border-right:1px solid var(--line)}
+.map-stats div:last-child{border-right:0}
+.map-stats b{display:block;font:500 31px var(--serif);color:var(--gold2)}
+.map-stats span{font-size:10px;color:var(--muted);display:block;line-height:1.5}
+.infographic-layout{align-items:start}
+.place-info{padding:6px 0}
+.place-info img{height:255px;filter:brightness(.78) saturate(.72)}
+.place-facts{font-size:11px;line-height:1.7}
+.artifact-game{background:linear-gradient(135deg,#211f19,#151511 72%);border:1px solid var(--line);padding:clamp(20px,4vw,42px);position:relative;overflow:hidden}
+.artifact-game:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 15% 0%,rgba(184,154,96,.09),transparent 40%)}
+.artifact-game-top{display:flex;align-items:center;justify-content:space-between;gap:14px;position:relative;z-index:1}
+.artifact-category{font-size:9px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase}
+.artifact-progress{height:2px;background:rgba(233,223,201,.12);margin:17px 0 30px;position:relative;z-index:1}
+.artifact-progress span{height:100%;display:block;background:var(--gold);width:0;transition:width .35s}
+.artifact-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;position:relative;z-index:1}
+.artifact-image-wrap{position:relative;min-height:390px;background:#0b0b09;border:1px solid var(--line);overflow:hidden}
+.artifact-image-wrap img{width:100%;height:100%;min-height:390px;object-fit:cover;filter:brightness(.86) saturate(.82)}
+.artifact-image-caption{position:absolute;bottom:0;left:0;right:0;padding:40px 18px 16px;background:linear-gradient(0deg,rgba(10,10,8,.88),transparent);color:#ded3c0;font-size:10px;letter-spacing:.08em}
+.artifact-question-wrap{padding:6px 0;display:flex;flex-direction:column}
+.artifact-question-wrap h3{font:500 clamp(32px,4vw,47px)/.98 var(--serif);color:var(--white);margin:12px 0 13px}
+.artifact-question{font-size:13px;color:var(--muted);margin:0 0 20px}
+.artifact-answers{display:grid;gap:9px}
+.artifact-answer{background:rgba(255,255,255,.025);border:1px solid var(--line);color:#d9cfbd;text-align:left;padding:15px 16px;font-size:12px;cursor:pointer;transition:.2s}
+.artifact-answer:hover:not(:disabled){border-color:var(--gold);background:rgba(184,154,96,.08);color:var(--white)}
+.artifact-answer:disabled{cursor:default}
+.artifact-answer.correct{border-color:#9da77c;background:rgba(157,167,124,.12)}
+.artifact-answer.wrong{border-color:#a66f62;background:rgba(166,111,98,.12)}
+.artifact-feedback{min-height:42px;margin-top:14px;font-size:12px;color:#d6c9b4;line-height:1.65}
+.artifact-story{border-top:1px solid var(--line);padding-top:18px;margin-top:4px}
+.artifact-story-label{font-size:9px;letter-spacing:.2em;color:var(--gold);margin-bottom:8px}
+.artifact-story p{font-size:12px;color:#cfc5b2;line-height:1.8;margin:0 0 13px}
+.artifact-current{border-left:2px solid var(--gold);padding:8px 0 8px 13px;margin:13px 0;display:flex;flex-direction:column;gap:4px}
+.artifact-current b{font-size:10px;color:var(--gold2);letter-spacing:.08em;text-transform:uppercase}
+.artifact-current span{font-size:11px;color:#d2c6b3;line-height:1.6}
+.artifact-source-link{font-size:10px;color:var(--gold2);border-bottom:1px solid rgba(216,192,146,.3);align-self:flex-start}
+.artifact-game-actions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:16px}
+.artifact-score{font:italic 18px var(--serif);color:var(--gold2)}
+.artifact-finish{position:relative;z-index:1;text-align:center;padding:30px 0}
+.artifact-finish strong{display:block;font:500 78px/1 var(--serif);color:var(--gold2);margin:14px 0}
+.artifact-finish h3{font:500 34px var(--serif);color:var(--white);margin:0 0 8px}
+.artifact-finish p{color:var(--muted);font-size:12px;max-width:520px;margin:0 auto 22px}
+.section-qr{padding-top:70px;padding-bottom:70px}
+.qr-route{display:grid;grid-template-columns:1fr .8fr;gap:60px;align-items:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:36px 0}
+.qr-route-copy h2{font:500 clamp(36px,4.4vw,54px)/.98 var(--serif);color:var(--white);margin:12px 0}
+.qr-route-copy p{font-size:12px;color:var(--muted);max-width:580px}
+.qr-route-copy .btn{margin-top:14px}
+.qr-route-visual{padding:28px;border:1px solid var(--line);background:radial-gradient(ellipse at center,#28261f,#141411)}
+.qr-route-line{display:flex;align-items:center;gap:7px}
+.qr-route-line span{width:32px;height:32px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold2);font:500 15px var(--serif)}
+.qr-route-line i{height:1px;background:var(--gold);flex:1;opacity:.5}
+.qr-route-items{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.qr-route-items div{display:flex;flex-direction:column;gap:4px}
+.qr-route-items b{font:500 20px var(--serif);color:var(--white)}
+.qr-route-items span{font-size:9px;color:var(--muted);line-height:1.5}
+.qr-mini-note{border-top:1px solid var(--line);margin-top:22px;padding-top:13px;font-size:9px;line-height:1.7;color:#807969}
+.sources .source-group ol{padding-left:19px}
+.photo-credits{margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
+.photo-credits summary{cursor:pointer;color:var(--gold2);font-size:10px;letter-spacing:.11em;text-transform:uppercase}
+.photo-credits p{font-size:10px;color:var(--muted);line-height:1.8}
+.photo-credits a{color:var(--gold2)}
+@media(max-width:900px){.story-grid-rich{grid-template-columns:repeat(2,1fr)}.artifact-layout{gap:24px}.artifact-image-wrap,.artifact-image-wrap img{min-height:330px}}
+@media(max-width:700px){
+ .visual-essay-head{grid-template-columns:1fr;gap:10px}.visual-essay-head h3{margin-bottom:8px}
+ .visual-triptych{grid-template-columns:1fr 1fr}.visual-frame:first-child{grid-column:1/-1}
+ .visual-frame img,.visual-frame-tall img{height:190px}.visual-frame:first-child img{height:250px}
+ .map-panel{padding:8px}.map-panel svg{min-height:300px}.map-stats{grid-template-columns:1fr}
+ .map-stats div{border-right:0;border-bottom:1px solid var(--line);padding:13px 15px}
+ .map-stats div:last-child{border-bottom:0}
+ .story-grid-rich{grid-template-columns:1fr}.story-grid-rich .story-visual{height:230px}
+ .artifact-layout{grid-template-columns:1fr;gap:22px}
+ .artifact-image-wrap,.artifact-image-wrap img{min-height:270px;height:270px}
+ .artifact-question-wrap h3{font-size:38px}
+ .artifact-game-actions{align-items:flex-start;flex-direction:column}
+ .qr-route{grid-template-columns:1fr;gap:24px;padding:28px 0}
+ .qr-route-visual{padding:18px}
+}
+
 </style>
 </head>
 <body>
@@ -229,37 +351,38 @@ img{max-width:100%;display:block}
   </a>
   <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">Меню ☰</button>
   <nav class="nav-links" id="navLinks">
-   <a href="#about">О проекте</a><a href="#chronology">Хронология</a><a href="#places">Места</a><a href="#stories">Экспонаты</a><a href="#quiz">Викторина</a><a href="#baggage">Литературный багаж</a>
+   <a href="#about">История</a><a href="#chronology">Хронология</a><a href="#places">География</a><a href="#stories">Предметы</a><a href="#artifact-game">Игра</a><a href="#quiz">Викторина</a>
   </nav>
  </div>
 </header>
 <main id="top">
 <section class="hero">
  <div class="hero-copy">
-  <div class="eyebrow kicker">История · Память · Наследие</div>
+  <div class="eyebrow kicker">Ленинградские пригороды · 1941–1944</div>
   <h1>За пределами <em>разграбления</em></h1>
   <div class="hero-rule"></div>
-  <p class="hero-lead">Культурное наследие дворцовых пригородов Ленинграда в годы оккупации: утраты, спасение и восстановление на примере Гатчины</p>
-  <p class="hero-desc">Цифровой музейный проект о том, что осталось за пределами списков вывезенных ценностей: разрушенных интерьерах, спасённых коллекциях, людях и памяти, которую удалось сохранить.</p>
-  <div class="hero-actions"><a class="btn primary" href="#about">Начать исследование <span>↗</span></a><a class="btn" href="#chronology">Открыть хронологию</a></div>
+  <p class="hero-lead">Истории дворцов, музейных предметов и людей, которые пытались сохранить память</p>
+  <p class="hero-desc">Что удалось вывезти, что исчезло в годы оккупации, что нашли спустя десятилетия — и что пришлось воссоздавать заново.</p>
+  <div class="hero-actions"><a class="btn primary" href="#stories">Открыть истории <span>↗</span></a><a class="btn" href="#artifact-game">Разгадать судьбу предмета</a></div>
+  <div class="hero-meta">ГАТЧИНА <i>·</i> ПУШКИН <i>·</i> ПЕТЕРГОФ <i>·</i> ПАВЛОВСК</div>
  </div>
- <div class="hero-visual">
-  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gatchina%20Palace%2C%20Southern%20facade.jpg?width=1800" alt="Современный вид южного фасада Гатчинского дворца">
-  <span class="hero-index">ГАТЧИНА · ЛЕНИНГРАДСКАЯ ОБЛАСТЬ</span>
-  <span class="hero-number">1941 — 1945</span>
-  <div class="hero-caption">Гатчинский дворец<br><small>современный вид</small></div>
+ <div class="hero-visual hero-archive">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Amber_Room_Catherine_Palace_Tsarskoye_Selo_pre-war_photo.jpg" alt="Янтарная комната Екатерининского дворца на архивной фотографии до войны">
+  <span class="hero-index">ЦАРСКОЕ СЕЛО · АРХИВНЫЙ СНИМОК</span>
+  <span class="hero-number">ДО 1941 ГОДА</span>
+  <div class="hero-caption">Янтарная комната<br><small>фотография около 1900 года · общественное достояние</small></div>
  </div>
 </section>
 
 <section class="section" id="about">
  <div class="wrap">
   <div class="intro-grid reveal">
-   <div><div class="kicker">01 / О проекте</div><p class="intro-statement">Культура — это не только то, что можно вывезти. Это то, что связывает поколения.</p></div>
+   <div><div class="kicker">01 / История и память</div><p class="intro-statement">Дворцы можно восстановить. Но не каждую утраченную вещь можно вернуть.</p></div>
    <div class="intro-copy">
-    <p>В годы Великой Отечественной войны Гатчина, Пушкин, Петергоф и Павловск оказались в зоне немецкой оккупации. Пострадали дворцы, музеи, парки, библиотеки, архивы и другие памятники культуры.</p>
-    <p>Когда говорят о разграблении, часто вспоминают о вывезенных произведениях искусства. Но судьба наследия была сложнее: часть коллекций удалось эвакуировать, некоторые предметы спрятали, другие вывезли или присвоили, а целые здания и исторические пространства оказались разрушены.</p>
-    <p>Этот проект рассматривает историю не только через цифры утрат, но и через документы, свидетельства музейных сотрудников и долгую работу по возвращению и восстановлению культурных ценностей. Главный пример исследования — Гатчинский дворец.</p>
-    <div class="pullquote">«Сохранить памятник — значит сохранить часть общей памяти»</div>
+    <p>В годы Великой Отечественной войны Гатчина, Пушкин, Петергоф и Павловск оказались в зоне немецкой оккупации. Пострадали дворцы, музеи, парки, библиотеки и коллекции, которые складывались поколениями.</p>
+    <p>Часть предметов успели эвакуировать. Другие спрятали в подвалах, закопали в парках или вывезли за пределы страны. Некоторые произведения удалось найти спустя десятилетия. А там, где оригиналы исчезли, реставраторы возвращали интерьеры и скульптуры по фотографиям, чертежам и сохранившимся фрагментам.</p>
+    <p>Эта история — не только о разграблении. Она о разрыве привычного культурного пространства и о людях, которые старались сохранить его для будущих поколений.</p>
+    <div class="pullquote">Память о культуре складывается из конкретных вещей — и из историй, которые с ними произошли.</div>
    </div>
   </div>
   <div class="stats reveal">
@@ -267,8 +390,25 @@ img{max-width:100%;display:block}
    <div class="stat"><strong>11 929</strong><span>предметов удалось эвакуировать из Гатчинского дворца</span></div>
    <div class="stat"><strong>1941–1944</strong><span>годы немецкой оккупации дворцовых пригородов Ленинграда</span></div>
   </div>
-  <p class="note">Числа приведены по материалам исследовательской работы и указанным в ней источникам.</p>
-  <div class="caution">В работе понятие «культурный геноцид» рассматривается как исследовательское понятие для анализа действий против культуры и исторической памяти. Конвенция ООН 1948 года определяет геноцид через намерение полностью или частично уничтожить национальную, этническую, расовую или религиозную группу как таковую. Поэтому не каждый случай разграбления культурных ценностей автоматически является геноцидом в юридическом смысле.</div>
+  <p class="note">Числа приведены по исследовательским и музейным материалам, перечисленным в разделе источников.</p>
+  <div class="visual-essay reveal">
+   <div class="visual-essay-head"><div class="kicker">Слои времени</div><h3>От утраченного оригинала — к памяти о нём</h3><p>Янтарная комната сохранилась на довоенных снимках. Её панели исчезли в годы войны, а интерьер позднее воссоздали заново.</p></div>
+   <div class="visual-triptych">
+    <figure class="visual-frame visual-frame-tall">
+     <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Catherine_Palace_interior_-_Amber_Room_%281%29.jpg" alt="Янтарная комната на фотографии 1931 года, до разрушения">
+     <figcaption><b>1931</b><span>Оригинальная Янтарная комната до войны</span><small>Брэнсон Де Ку · общественное достояние</small></figcaption>
+    </figure>
+    <figure class="visual-frame">
+     <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Original_Amber_Room%27s_remains_-_panno_Feel_and_Touch_%281751%2C_Hermitage%29_01_by_shakko.JPG" alt="Оригинальная флорентийская мозаика из первоначального убранства Янтарной комнаты">
+     <figcaption><b>2000</b><span>Одна из оригинальных мозаик вернулась в Царское Село</span><small>Фото: Shakko · CC BY-SA 4.0</small></figcaption>
+    </figure>
+    <figure class="visual-frame">
+     <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Amber_Room_part.jpg" alt="Фрагмент воссозданной Янтарной комнаты">
+     <figcaption><b>2003</b><span>Воссозданная Янтарная комната открылась для посетителей</span><small>Фото: Putnik · CC BY-SA 2.5</small></figcaption>
+    </figure>
+   </div>
+  </div>
+  <div class="caution">В исследовании понятие «культурный геноцид» используется как исследовательское понятие для анализа действий против культуры и исторической памяти. Не каждый случай разграбления автоматически является геноцидом в юридическом смысле: важны конкретные действия, обстоятельства и доказательства намерений.</div>
  </div>
 </section>
 
@@ -284,50 +424,67 @@ img{max-width:100%;display:block}
 
 <section class="section" id="places">
  <div class="wrap">
-  <div class="section-head reveal"><div><div class="kicker">03 / География памяти</div><h2>Четыре дворцовых<br>пригорода</h2></div><p>У каждого места была своя история оккупации, спасения коллекций и послевоенного восстановления. Выбери точку на схеме.</p></div>
-  <div class="places-layout reveal">
+  <div class="section-head reveal"><div><div class="kicker">03 / География памяти</div><h2>Четыре дворцовых<br>пригорода</h2></div><p>Выбери точку на схеме. Справа откроется краткая история места, его потерь и возвращения к музейной жизни.</p></div>
+  <div class="places-layout infographic-layout reveal">
    <div>
-    <div class="map-panel">
-     <svg viewBox="0 0 600 430" role="img" aria-label="Схема расположения дворцовых пригородов Ленинграда">
-      <path d="M75 335 C130 285 130 210 210 195 S330 125 390 160 S465 250 525 225" fill="none" stroke="rgba(216,192,146,.18)" stroke-width="2" stroke-dasharray="5 8"/>
-      <path d="M110 95 C190 50 260 75 330 105" fill="none" stroke="rgba(216,192,146,.1)" stroke-width="1"/>
-      <text x="30" y="35" letter-spacing="3">СХЕМА · НЕ В МАСШТАБЕ</text>
-      <text x="265" y="205" font-size="13" letter-spacing="2">ЛЕНИНГРАД</text>
-      <circle cx="303" cy="220" r="4" fill="#e9dfc9"/>
-      <g class="pin active" data-place="gatchina" tabindex="0" role="button" aria-label="Гатчина">
-       <circle cx="125" cy="315" r="7"/><text x="87" y="345">Гатчина</text>
-      </g>
+    <div class="map-panel map-infographic">
+     <div class="map-topline"><span>ЛЕНИНГРАДСКАЯ ОБЛАСТЬ</span><span>1941—1944</span></div>
+     <svg viewBox="0 0 760 520" role="img" aria-label="Интерактивная условная схема расположения четырёх дворцовых пригородов Ленинграда">
+      <defs>
+       <linearGradient id="land" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#333126"/><stop offset="1" stop-color="#1a1b17"/></linearGradient>
+       <linearGradient id="water" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#263b3b"/><stop offset="1" stop-color="#172929"/></linearGradient>
+       <pattern id="mapGrid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="rgba(216,192,146,.08)" stroke-width="1"/></pattern>
+       <filter id="pinGlow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+      <rect x="0" y="0" width="760" height="520" rx="12" fill="url(#land)"/>
+      <rect x="0" y="0" width="760" height="520" rx="12" fill="url(#mapGrid)"/>
+      <path d="M0 0H760V95C685 110 638 89 578 111C515 133 470 122 417 106C340 83 301 101 248 117C165 141 102 112 0 145Z" fill="url(#water)" opacity=".96"/>
+      <path d="M0 145C102 112 165 141 248 117C301 101 340 83 417 106C470 122 515 133 578 111C638 89 685 110 760 95" fill="none" stroke="#73908a" stroke-width="1.4" opacity=".65"/>
+      <text x="52" y="58" class="water-label">ФИНСКИЙ ЗАЛИВ</text>
+      <path d="M0 225C80 208 133 218 192 236C256 256 312 253 369 230C433 204 483 210 541 232C607 255 671 240 760 214" fill="none" stroke="#8d987c" stroke-width="2" stroke-dasharray="6 9" opacity=".35"/>
+      <path d="M88 389C160 352 212 321 284 302S432 274 528 299 648 367 700 397" fill="none" stroke="#b89a60" stroke-width="2" stroke-dasharray="3 8" opacity=".55"/>
+      <path d="M112 151C177 192 249 204 304 228C373 258 413 309 462 340" fill="none" stroke="#617c76" stroke-width="1.5" opacity=".45"/>
+      <circle cx="380" cy="237" r="8" fill="#e9dfc9" opacity=".9"/>
+      <circle cx="380" cy="237" r="25" fill="none" stroke="#e9dfc9" stroke-dasharray="2 5" opacity=".25"/>
+      <text x="401" y="231" class="city-label">ЛЕНИНГРАД</text>
+      <text x="401" y="249" class="city-sub">город и его окрестности</text>
+      <g class="map-route"><path d="M174 151L238 345L520 371L570 435" fill="none" stroke="#c3a46e" stroke-width="2" stroke-dasharray="4 8" opacity=".65"/></g>
       <g class="pin" data-place="peterhof" tabindex="0" role="button" aria-label="Петергоф">
-       <circle cx="115" cy="135" r="7"/><text x="72" y="117">Петергоф</text>
+       <circle class="pin-halo" cx="174" cy="151" r="19"/><circle cx="174" cy="151" r="7"/><text x="202" y="149">ПЕТЕРГОФ</text><text class="pin-sub" x="202" y="167">фонтанные ансамбли</text>
       </g>
-      <g class="pin" data-place="pushkin" tabindex="0" role="button" aria-label="Пушкин">
-       <circle cx="430" cy="275" r="7"/><text x="395" y="306">Пушкин</text>
+      <g class="pin" data-place="gatchina" tabindex="0" role="button" aria-label="Гатчина">
+       <circle class="pin-halo" cx="238" cy="345" r="19"/><circle cx="238" cy="345" r="7"/><text x="265" y="343">ГАТЧИНА</text><text class="pin-sub" x="265" y="361">главный пример</text>
+      </g>
+      <g class="pin" data-place="pushkin" tabindex="0" role="button" aria-label="Пушкин, Царское Село">
+       <circle class="pin-halo" cx="520" cy="371" r="19"/><circle cx="520" cy="371" r="7"/><text x="548" y="368">ПУШКИН</text><text class="pin-sub" x="548" y="386">Царское Село</text>
       </g>
       <g class="pin" data-place="pavlovsk" tabindex="0" role="button" aria-label="Павловск">
-       <circle cx="510" cy="340" r="7"/><text x="477" y="371">Павловск</text>
+       <circle class="pin-halo" cx="570" cy="435" r="19"/><circle cx="570" cy="435" r="7"/><text x="596" y="437">ПАВЛОВСК</text><text class="pin-sub" x="596" y="455">дворец и парк</text>
       </g>
-      <path d="M48 385 L48 350 M48 350 l-5 9 M48 350 l5 9" stroke="#b89a60" fill="none"/><text x="32" y="407">ЮГ</text>
+      <text x="28" y="488" class="map-foot">УСЛОВНАЯ СХЕМА · НЕ В МАСШТАБЕ</text>
+      <text x="733" y="488" text-anchor="end" class="map-foot">4 МУЗЕЙНЫХ АНСАМБЛЯ</text>
      </svg>
-     <p class="map-note">Условная схема взаимного расположения пригородов. Это не навигационная карта.</p>
+     <div class="map-legend"><span><i></i> дворцово-парковый ансамбль</span><span>пунктир — связь между местами памяти</span></div>
     </div>
     <div class="place-tabs">
-     <button class="place-tab active" data-place="gatchina">Гатчина</button><button class="place-tab" data-place="pushkin">Пушкин</button><button class="place-tab" data-place="peterhof">Петергоф</button><button class="place-tab" data-place="pavlovsk">Павловск</button>
+     <button class="place-tab" data-place="gatchina">Гатчина</button><button class="place-tab" data-place="pushkin">Пушкин</button><button class="place-tab" data-place="peterhof">Петергоф</button><button class="place-tab" data-place="pavlovsk">Павловск</button>
     </div>
    </div>
    <div class="place-info" id="placeInfo">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gatchina%20Palace%2C%20Southern%20facade.jpg?width=1200" alt="Гатчинский дворец, современный вид">
-    <div class="kicker">Главный пример исследования</div><h3>Гатчина</h3>
-    <p>Гатчинский дворец был не только архитектурным памятником, но и большим музейным комплексом с коллекциями, библиотекой, архивными и религиозными ценностями. Во время оккупации дворец использовали военные подразделения; ценности вывозили и присваивали, а при отступлении здание было сожжено.</p>
-    <div class="place-facts">Эвакуация: 11 929 предметов · Освобождение: 26 января 1944 года · Первые три восстановленных парадных зала открыты 8 мая 1985 года.</div>
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gatchina_Palace,_Southern_facade.jpg" alt="Южный фасад Гатчинского дворца">
+    <div class="kicker">Главный пример</div><h3>Гатчина</h3>
+    <p>Дворец был превращён в военное пространство, его коллекции разграбляли, а при отступлении здание сожгли. После войны восстановление шло поэтапно — от расчистки и обмеров до научной реставрации.</p>
+    <div class="place-facts">11 929 эвакуированных предметов · освобождение — 26 января 1944 года · первые три парадных зала открыты 8 мая 1985 года.</div>
    </div>
   </div>
+  <div class="map-stats reveal"><div><b>40 765</b><span>предметов вывезено из пригородных дворцов-музеев</span></div><div><b>4</b><span>дворцово-парковых ансамбля в фокусе исследования</span></div><div><b>1944</b><span>год освобождения Гатчины и начала восстановления</span></div></div>
  </div>
 </section>
 
 <section class="section" id="stories">
  <div class="wrap">
-  <div class="section-head reveal"><div><div class="kicker">04 / Девять историй</div><h2>Экспонаты,<br>которые помнят</h2></div><p>За каждым предметом или зданием — отдельная история. Открой карточку, чтобы узнать, что произошло и почему этот пример важен для понимания общей судьбы культурного наследия.</p></div>
-  <div class="story-grid" id="storyGrid"></div>
+  <div class="section-head reveal"><div><div class="kicker">04 / Истории предметов</div><h2>Вещи, за которыми<br>стоит судьба</h2></div><p>Картины, скульптуры, мозаики, вазы и интерьеры. Одни удалось вернуть, другие пришлось воссоздать, а некоторые оригиналы до сих пор не найдены.</p></div>
+  <div class="story-grid story-grid-rich" id="storyGrid"></div>
  </div>
 </section>
 
@@ -343,9 +500,40 @@ img{max-width:100%;display:block}
  </div>
 </section>
 
+<section class="section" id="artifact-game">
+ <div class="wrap">
+  <div class="section-head reveal"><div><div class="kicker">05 / Интерактивная коллекция</div><h2>Угадай судьбу<br>экспоната</h2></div><p>Сначала рассмотри предмет и предположи, что с ним произошло. Затем открой документальную историю — и узнай, как он выглядит сегодня.</p></div>
+  <div class="artifact-game reveal" id="artifactGame">
+   <div class="artifact-game-top"><span class="small-caps" id="artifactCategory">КОЛЛЕКЦИЯ · КАРТИНА</span><span class="quiz-progress" id="artifactProgress">Предмет 1 из 8</span></div>
+   <div class="artifact-progress"><span id="artifactProgressBar"></span></div>
+   <div class="artifact-layout">
+    <div class="artifact-image-wrap">
+     <img id="artifactImage" src="" alt="">
+     <div class="artifact-image-caption" id="artifactImageCaption"></div>
+    </div>
+    <div class="artifact-question-wrap">
+     <div class="kicker">Вопрос по экспонату</div>
+     <h3 id="artifactTitle">Что произошло с этим предметом?</h3>
+     <p class="artifact-question" id="artifactQuestion">Что случилось с ним в годы оккупации?</p>
+     <div class="artifact-answers" id="artifactAnswers"></div>
+     <div class="artifact-feedback" id="artifactFeedback" aria-live="polite"></div>
+     <div class="artifact-story" id="artifactStory" hidden>
+      <div class="artifact-story-label">ИСТОРИЯ ПРЕДМЕТА</div>
+      <p id="artifactStoryText"></p>
+      <div class="artifact-current"><b>Что сейчас</b><span id="artifactNow"></span></div>
+      <a class="artifact-source-link" id="artifactSource" href="#" target="_blank" rel="noopener">Источник истории ↗</a>
+     </div>
+     <div class="artifact-game-actions"><span class="artifact-score" id="artifactScore">Верных ответов: 0</span><button class="btn primary" id="artifactNext" style="display:none">Следующий предмет →</button></div>
+    </div>
+   </div>
+   <div class="artifact-finish" id="artifactFinish" hidden><div class="kicker">Коллекция исследована</div><strong id="artifactFinalScore">0 / 8</strong><h3 id="artifactFinalTitle">Спасибо за внимание</h3><p>Каждая найденная вещь возвращает часть истории. Не все оригиналы удалось вернуть, но их судьбы можно восстановить по документам и свидетельствам.</p><button class="btn primary" id="artifactRestart">Начать заново ↻</button></div>
+  </div>
+ </div>
+</section>
+
 <section class="section" id="quiz">
  <div class="wrap">
-  <div class="section-head reveal"><div><div class="kicker">06 / Проверь себя</div><h2>Викторина<br>о судьбе памяти</h2></div><p>Девять вопросов в трёх категориях: «Спасти», «Утраты» и «Вернуть память». После каждого ответа появится объяснение.</p></div>
+  <div class="section-head reveal"><div><div class="kicker">06 / После знакомства с историями</div><h2>Проверь,<br>что запомнил</h2></div><p>Короткая викторина по основным событиям. Девять вопросов о спасении, потерях и возвращении культурных ценностей.</p></div>
   <div class="quiz-shell reveal">
    <div id="quizPlay">
     <div class="quiz-top"><div class="quiz-category" id="quizCategory">Категория: Спасти</div><div class="quiz-progress" id="quizProgress">Вопрос 1 из 9</div></div>
@@ -360,19 +548,24 @@ img{max-width:100%;display:block}
  </div>
 </section>
 
-<section class="section" id="baggage">
+<section class="section section-qr" id="baggage">
  <div class="wrap">
-  <div class="section-head reveal"><div><div class="kicker">07 / Физическая экспозиция</div><h2>Литературный<br>багаж</h2></div><p>Интерактивная тематическая композиция продолжает цифровой музей в реальном пространстве. Она помогает перейти от предмета в экспозиции к его истории.</p></div>
-  <div class="baggage-layout reveal">
-   <div class="baggage-copy">
-    <p>«Литературный багаж» — физическая композиция, посвящённая судьбе культурного наследия дворцовых пригородов Ленинграда. В ней предметы, архивные карточки и подписи становятся отправными точками для знакомства с историей эвакуации, утраты и восстановления.</p>
-    <p>Посетитель сможет отсканировать QR-код рядом с экспозиционным объектом и перейти к соответствующей истории на сайте. Так физическая часть проекта будет связана с цифровым музеем.</p>
-    <p>Фотографии готовой композиции и настоящие QR-коды будут добавлены после завершения оформления экспозиции.</p>
+  <div class="qr-route reveal">
+   <div class="qr-route-copy">
+    <div class="kicker">07 / Из экспозиции — к истории</div>
+    <h2 class="serif">Литературный багаж</h2>
+    <p>Физическая экспозиция и цифровой музей связаны одним маршрутом: у каждого предмета будет QR-код, который откроет его историю, фотографию и результат поиска или восстановления.</p>
+    <p>Посетитель сможет продолжить знакомство с предметом уже на сайте — увидеть архивные материалы, узнать его судьбу и сравнить прошлое с настоящим.</p>
+    <a href="#artifact-game" class="btn">Перейти к историям экспонатов ↗</a>
    </div>
-   <div class="baggage-display" aria-label="Визуальная схема будущей экспозиции">
-    <div class="suitcase"><div class="suitcase-stamp">Литературный<br>багаж<small>Память в пути · 1941—1945</small></div></div>
-    <div class="placeholder"><div><strong>Фото экспозиции</strong>Место для фото готового макета</div></div>
-    <div class="placeholder"><div><strong>QR-код</strong>Добавить настоящий QR-код</div></div>
+   <div class="qr-route-visual">
+    <div class="qr-route-line"><span>01</span><i></i><span>02</span><i></i><span>03</span></div>
+    <div class="qr-route-items">
+     <div><b>Предмет</b><span>В физической экспозиции</span></div>
+     <div><b>QR-код</b><span>Переход к истории</span></div>
+     <div><b>История</b><span>Фото, документы, судьба</span></div>
+    </div>
+    <div class="qr-mini-note">Места для настоящих QR-кодов появятся после окончательного оформления экспозиции.</div>
    </div>
   </div>
  </div>
@@ -385,19 +578,11 @@ img{max-width:100%;display:block}
  </div>
 </section>
 
-<section class="section" id="survey">
- <div class="wrap">
-  <div class="section-head reveal"><div><div class="kicker">09 / Исследование отношения подростков</div><h2>Как мы понимаем<br>культурную память?</h2></div><p>В проекте предусмотрено первичное и повторное анкетирование подростков. Его задача — выяснить, как молодые люди воспринимают культурные потери и меняется ли понимание темы после знакомства с материалами проекта.</p></div>
-  <div class="survey-grid reveal">
-   <article class="survey-card"><h3>Первичный опрос</h3><p>Анкетирование до знакомства с цифровым музеем и другими материалами проекта.</p><div class="survey-empty">Результаты первичного опроса будут добавлены</div></article>
-   <article class="survey-card"><h3>Повторный опрос</h3><p>Анкетирование после знакомства с продуктом. Результаты можно будет сравнить с первичными ответами.</p><div class="survey-empty">Результаты повторного опроса будут добавлены</div></article>
-  </div>
- </div>
-</section>
+
 
 <section class="section" id="sources">
  <div class="wrap">
-  <div class="section-head reveal"><div><div class="kicker">10 / Библиография</div><h2>Источники<br>и материалы</h2></div><p>Перечень составлен на основе исследовательской работы. Для проверки сведений использованы научные публикации, архивные описания и материалы музеев-заповедников.</p></div>
+  <div class="section-head reveal"><div><div class="kicker">09 / Источники</div><h2>Документы<br>и литература</h2></div><p>Здесь собраны публикации, архивные описания и материалы музеев-заповедников, на которых основаны представленные истории.</p></div>
   <div class="sources reveal">
    <div class="source-group"><h3>Понятие культурного геноцида и международные документы</h3><ol>
     <li>Бабаян М. Э. Феномен культурного геноцида: история и современность // Евразийская интеграция: экономика, право, политика. 2020. № 3. С. 99–111. <a href="https://doi.org/10.22394/2073-2929-2020-3-99-111" target="_blank" rel="noopener">DOI</a>.</li>
@@ -424,6 +609,10 @@ img{max-width:100%;display:block}
     <li>Национальный атлас России. Материалы о музеях-заповедниках «Царское Село» и «Павловск».</li>
    </ol></div>
   </div>
+  <details class="photo-credits"><summary>Фотографии и лицензии</summary>
+   <p>Архивный снимок Янтарной комнаты около 1900 года — Elizabeth Simpson, Public Domain. Фото Янтарной комнаты 1931 года — Branson DeCou, Public Domain. Фрагмент воссозданной Янтарной комнаты — Putnik, CC BY-SA 2.5. Мозаика «Осязание и Обоняние» — Shakko, CC BY-SA 4.0. Белый зал Гатчинского дворца — Disco76, CC BY-SA 3.0. Скульптура «Самсон» и Зал войны Павловского дворца — GAlexandrova, CC BY-SA 4.0. Портрет Александра Александровича — С. К. Зарянко, Public Domain. Для каждого изображения ссылка ведёт на страницу файла с полными условиями лицензии.</p>
+   <p><a href="https://commons.wikimedia.org/wiki/File:Amber_Room_Catherine_Palace_Tsarskoye_Selo_pre-war_photo.jpg" target="_blank" rel="noopener">Янтарная комната до войны</a> · <a href="https://commons.wikimedia.org/wiki/File:Catherine_Palace_interior_-_Amber_Room_(1).jpg" target="_blank" rel="noopener">Янтарная комната, 1931</a> · <a href="https://commons.wikimedia.org/wiki/File:Amber_Room_part.jpg" target="_blank" rel="noopener">Воссозданная комната</a> · <a href="https://commons.wikimedia.org/wiki/File:Original_Amber_Room%27s_remains_-_panno_Feel_and_Touch_(1751,_Hermitage)_01_by_shakko.JPG" target="_blank" rel="noopener">Оригинальная мозаика</a> · <a href="https://commons.wikimedia.org/wiki/File:The_White_hall_of_the_Gatchina_palace.jpg" target="_blank" rel="noopener">Белый зал</a> · <a href="https://commons.wikimedia.org/wiki/File:2292._Peterhof._Samson_Fountain.jpg" target="_blank" rel="noopener">Самсон</a> · <a href="https://commons.wikimedia.org/wiki/File:Zarianko_Al3.jpg" target="_blank" rel="noopener">Портрет Зарянко</a></p>
+  </details>
   <div class="caution">Подписи к фотографиям ведут на страницы файлов Wikimedia Commons. Фотографии показывают современные виды дворцов и не являются изображениями их состояния в годы войны.</div>
   <p class="note">Фотографии: Wikimedia Commons — <a href="https://commons.wikimedia.org/wiki/File:Gatchina_Palace,_Southern_facade.jpg" target="_blank" rel="noopener">Гатчинский дворец</a>, <a href="https://commons.wikimedia.org/wiki/File:Catherine_-_Palais_(02).jpg" target="_blank" rel="noopener">Екатерининский дворец</a>, <a href="https://commons.wikimedia.org/wiki/File:Grand_Peterhof_Palace_01.jpg" target="_blank" rel="noopener">Большой дворец в Петергофе</a>, <a href="https://commons.wikimedia.org/wiki/File:Павловск._Дворец,_западный_фасад_01.jpg" target="_blank" rel="noopener">Павловский дворец</a>. Условия использования и авторство указаны на страницах файлов.</p>
  </div>
@@ -431,7 +620,7 @@ img{max-width:100%;display:block}
 </main>
 <footer class="footer">
  <div class="wrap">
-  <div class="footer-top"><div><div class="kicker">Автор проекта</div><div class="author">Манэ Охоян</div><p>Ученица 10Б класса · Санкт-Петербург · 2026</p></div><div><div class="kicker">О чём этот проект</div><p>О судьбе культурного наследия, людях, которые его спасали,<br>и памяти, которую важно передавать следующим поколениям.</p></div></div>
+  <div class="footer-top"><div><div class="kicker">Автор</div><div class="author">Манэ Охоян Горовна</div><p>Ученица 10Б класса<br>ГБОУ СОШ № 683 Приморского района Санкт-Петербурга<br>Санкт-Петербург · 2026</p></div><div><div class="kicker">О чём этот проект</div><p>О судьбе культурного наследия, людях, которые его спасали,<br>и памяти, которую важно передавать следующим поколениям.</p></div></div>
   <div class="footer-bottom"><span>За пределами разграбления · Цифровой музей</span><span>История · Память · Наследие</span></div>
  </div>
 </footer>
@@ -472,11 +661,11 @@ renderTimeline('all');
 document.getElementById('timelineFilters').addEventListener('click',(e)=>{const b=e.target.closest('[data-filter]');if(!b)return;document.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x===b));renderTimeline(b.dataset.filter);});
 
 const placeData={
-gatchina:{name:"Гатчина",tag:"Главный пример исследования",img:"https://commons.wikimedia.org/wiki/Special:FilePath/Gatchina%20Palace%2C%20Southern%20facade.jpg?width=1200",alt:"Современный вид Гатчинского дворца",desc:"Гатчинский дворец был не только архитектурным памятником, но и большим музейным комплексом с коллекциями, библиотекой, архивными и религиозными ценностями. Во время оккупации дворец использовали военные подразделения; ценности вывозили и присваивали, а при отступлении здание было сожжено.",facts:"Эвакуация: 11 929 предметов · Освобождение: 26 января 1944 года · Первые три восстановленных парадных зала открыты 8 мая 1985 года."},
-pushkin:{name:"Пушкин (Царское Село)",tag:"Янтарная комната",img:"https://commons.wikimedia.org/wiki/Special:FilePath/Catherine%20-%20Palais%20%2802%29.jpg?width=1200",alt:"Современный вид Екатерининского дворца",desc:"Екатерининский дворец и парки были тяжело повреждены. Янтарные панели не эвакуировали: после захвата дворца их сняли немецкие специалисты и отправили в Кёнигсберг. После повторного вывоза в 1944 году следы оригинальных панелей потерялись.",facts:"Первые восстановленные залы открылись в 1959 году · Воссозданная Янтарная комната открылась в 2003 году."},
-peterhof:{name:"Петергоф",tag:"Возвращённая композиция «Нептун»",img:"https://commons.wikimedia.org/wiki/Special:FilePath/Grand%20Peterhof%20Palace%2001.jpg?width=1200",alt:"Современный вид Большого дворца в Петергофе",desc:"Большой дворец и другие сооружения Петергофа оказались в руинах, часть парковой скульптуры была утрачена или спрятана. Скульптурная композиция фонтана «Нептун» была демонтирована и вывезена в Германию.",facts:"Эвакуировано 12 932 музейных предмета · «Нептун» вернулся в 1947 году в 12 ящиках и вновь открылся после восстановления в 1956 году · Первые залы Большого дворца открылись в мае 1964 года."},
-pavlovsk:{name:"Павловск",tag:"Сохранение скульптур и «Летящий Меркурий»",img:"https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D1%81%D0%BA.%20%D0%94%D0%B2%D0%BE%D1%80%D0%B5%D1%86%2C%20%D0%B7%D0%B0%D0%BF%D0%B0%D0%B4%D0%BD%D1%8B%D0%B9%20%D1%84%D0%B0%D1%81%D0%B0%D0%B4%2001.jpg?width=1200",alt:"Современный вид Павловского дворца",desc:"Директор музея А. И. Зеленова организовала эвакуацию коллекций. Особенно ценные античные статуи и скульптуры муз спрятали в подвале дворца, который затем замуровали. Часть утраченных произведений удалось найти спустя десятилетия.",facts:"Парк открылся в 1950 году · Первые восстановленные залы — в 1957 году · «Летящий Меркурий» вернулся в 2005 году."}
-};
+gatchina:{name:"Гатчина",tag:"Главный пример",img:"https://commons.wikimedia.org/wiki/Special:FilePath/Gatchina_Palace,_Southern_facade.jpg",alt:"Южный фасад Гатчинского дворца",desc:"Гатчинский дворец использовали как штаб, общежитие, офицерское казино и склады. При отступлении немецких войск его сожгли. После освобождения начались расчистка, обмеры и подготовка к восстановлению.",facts:"Эвакуировано 11 929 предметов · Гатчина освобождена 26 января 1944 года · первые три парадных зала открыты 8 мая 1985 года."},
+pushkin:{name:"Пушкин (Царское Село)",tag:"История Янтарной комнаты",img:"https://commons.wikimedia.org/wiki/Special:FilePath/Amber_Room_part.jpg",alt:"Фрагмент воссозданной Янтарной комнаты",desc:"Екатерининский дворец оказался в руинах. Янтарные панели не эвакуировали: их сняли немецкие специалисты и отправили в Кёнигсберг. После повторного вывоза в 1944 году следы оригинала потерялись.",facts:"Два предмета первоначального убранства вернулись в 2000 году · воссозданная Янтарная комната открылась в 2003 году."},
+peterhof:{name:"Петергоф",tag:"Возвращённые скульптуры",img:"https://commons.wikimedia.org/wiki/Special:FilePath/Neptune_Fountain-Peterhof.jpg",alt:"Фонтанная композиция «Нептун» в Петергофе",desc:"Большой дворец и парковые ансамбли сильно пострадали. Часть скульптур укрывали, часть была вывезена. Композицию «Нептун» вернули из Германии в разобранном виде, и её пришлось собирать и восстанавливать.",facts:"Эвакуировано 12 932 музейных предмета · «Нептун» вернулся в 12 ящиках в 1947 году и вновь занял место в 1956-м."},
+pavlovsk:{name:"Павловск",tag:"Скульптуры и дворцовые интерьеры",img:"https://commons.wikimedia.org/wiki/Special:FilePath/8238.1._Hall_of_War_of_Pavlovsk_Palace.jpg",alt:"Зал войны Павловского дворца",desc:"Часть коллекций удалось эвакуировать, а наиболее ценные античные статуи и скульптуры муз спрятали в подвале дворца и замуровали. Другие произведения были вывезены и обнаружены спустя десятилетия.",facts:"Парк открылся в 1950 году · первые восстановленные залы дворца — в 1957 году · «Летящий Меркурий» вернулся в 2005 году."}
+
 function selectPlace(key){
  const p=placeData[key];if(!p)return;
  document.querySelectorAll('.place-tab').forEach(b=>b.classList.toggle('active',b.dataset.place===key));
@@ -487,16 +676,28 @@ function selectPlace(key){
 document.querySelectorAll('.place-tab,.pin').forEach(b=>{b.addEventListener('click',()=>selectPlace(b.dataset.place));b.addEventListener('keydown',(e)=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectPlace(b.dataset.place);}});});
 
 const stories=[
-{title:"Гатчинский дворец",place:"Гатчина · 1941–1944",img:"https://commons.wikimedia.org/wiki/Special:FilePath/Gatchina%20Palace%2C%20Southern%20facade.jpg?width=900",teaser:"Исторические помещения превратились в пространство военного использования.",body:"Во время оккупации во дворце размещались военные подразделения. Помещения использовали как штаб, общежитие, офицерское казино и склады. Предметы интерьеров использовались как обычная обстановка. В немецких отчётах 1941 года описаны повреждения, пустые рамы, разбросанные книги и документы. Эти свидетельства показывают, что разграбление и повреждение дворца происходили уже в первые месяцы оккупации.",source:"По публикации А. Н. Фарафоновой и материалам музея-заповедника «Гатчина»."},
-{title:"Библиотека дворца",place:"Гатчина · 1941",img:"",teaser:"Книги стали частью систематического изъятия культурных материалов.",body:"В сохранившейся части библиотеки Гатчинского дворца находилось около 30 тысяч томов. По сведениям, приведённым в исследовательской работе, команда Кюнсберга изъяла 16 тысяч книг. В документах также упоминается дальнейшая передача и отправка книг на проверку и упаковку. История библиотеки показывает, что интерес немецких подразделений распространялся не только на картины и декоративные предметы, но и на письменное наследие.",source:"Информационно-аналитические материалы 2025 года, цитируемые в исследовательской работе."},
-{title:"465 картин из Гатчины",place:"Гатчина · март 1945",img:"",teaser:"Одна из самых значительных находок в истории поиска музейных ценностей.",body:"В марте 1945 года А. М. Кучумов обнаружил в Рижском замке 465 картин из коллекции Гатчинского дворца. Возвращение этих произведений стало важным этапом восстановления собрания. Поиск продолжался и позже: в 2018 году в Гатчину вернулись ещё 16 портретов, утраченных во время оккупации.",source:"Материалы музея-заповедника «Гатчина» и каталога Минкультуры «Культурные ценности — жертвы войны»."},
-{title:"Сожжение дворца",place:"Гатчина · 1944",img:"",teaser:"Уничтожение затронуло не только отдельные предметы, но и сам исторический ансамбль.",body:"Согласно опубликованным материалам Государственного музея-заповедника «Гатчина», перед отступлением здание было заминировано, а внутренние стены обработаны зажигательной жидкостью. Последовавший пожар уничтожил сохранившиеся интерьеры и значительную часть исторического убранства. Акт специальной комиссии от 10 апреля 1944 года зафиксировал, что дворец был сожжён немцами при отступлении. Это свидетельство важно для понимания характера разрушений.",source:"Материалы музея-заповедника «Гатчина»; акт специальной комиссии от 10 апреля 1944 года."},
-{title:"Исторический парк Гатчины",place:"Гатчина · годы оккупации",img:"https://commons.wikimedia.org/wiki/Special:FilePath/0044Ga.%20%D0%93%D0%B0%D1%82%D1%87%D0%B8%D0%BD%D0%B0.%20%D0%94%D0%B2%D0%BE%D1%80%D1%86%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%BF%D0%B0%D1%80%D0%BA.jpg?width=900",teaser:"Война изменила не только дворец, но и созданное вокруг него культурное пространство.",body:"Разрушения затронули исторический парк: были взорваны мосты, разбиты мраморные скульптуры, уничтожены отдельные постройки, снята чугунная ограда и вывезен художественный паркет. Тысячи деревьев были вырублены. Парк являлся частью дворцово-паркового ансамбля, поэтому его повреждение означало утрату не только отдельных сооружений, но и исторического облика места.",source:"М. В. Кирпичникова. Гатчинский парк в годы войны и первые послевоенные годы."},
-{title:"Янтарная комната",place:"Пушкин · 1941–2003",img:"https://commons.wikimedia.org/wiki/Special:FilePath/Catherine%20-%20Palais%20%2802%29.jpg?width=900",teaser:"Оригинальные панели не удалось вернуть, но интерьер был воссоздан.",body:"Из-за хрупкости янтарных панелей перед оккупацией их не демонтировали, а законсервировали на месте. После захвата дворца немецкие специалисты сняли панели и отправили их в Кёнигсберг. В 1944 году после повторного демонтажа и вывоза следы оригинальных панелей потерялись. В апреле 2000 года вернулись два предмета первоначального убранства: наборный комод конца XVIII века и флорентийская мозаика «Осязание и Обоняние». Воссозданная Янтарная комната открылась в 2003 году.",source:"Материалы музея-заповедника «Царское Село» об истории Янтарной комнаты."},
-{title:"Петергоф и «Нептун»",place:"Петергоф · 1947–1956",img:"https://commons.wikimedia.org/wiki/Special:FilePath/Grand%20Peterhof%20Palace%2001.jpg?width=900",teaser:"Возвращённая композиция потребовала отдельной работы реставраторов.",body:"Скульптурную композицию фонтана «Нептун» демонтировали и вывезли в Германию. В 1947 году она вернулась в СССР в разобранном виде, в двенадцати ящиках. После этого мастера Петергофа восстановили и смонтировали композицию на прежнем месте. Фонтан вновь открылся в 1956 году. Этот пример показывает, что возвращение предмета не всегда означало его немедленное восстановление.",source:"Материалы Государственного музея-заповедника «Петергоф»."},
-{title:"Павловск и «Летящий Меркурий»",place:"Павловск · 1979–2005",img:"https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D1%81%D0%BA.%20%D0%94%D0%B2%D0%BE%D1%80%D0%B5%D1%86%2C%20%D0%B7%D0%B0%D0%BF%D0%B0%D0%B4%D0%BD%D1%8B%D0%B9%20%D1%84%D0%B0%D1%81%D0%B0%D0%B4%2001.jpg?width=900",teaser:"Поиск утраченных произведений мог продолжаться несколько десятилетий.",body:"Скульптура «Летящий Меркурий» была вывезена из Павловска в годы оккупации. В 1979 году искусствовед С. Андросов увидел её в Художественно-историческом музее Вены и обратил внимание на русскую надпись на основании. В 2002 году австрийские специалисты подтвердили принадлежность скульптуры Павловску. В 2005 году её вернули в Россию, а 7 октября она заняла своё историческое место в музее-заповеднике.",source:"Материалы Минкультуры РФ «Культурные ценности — жертвы войны»."},
-{title:"Спрятанные скульптуры",place:"Павловск и Петергоф · 1941",img:"",teaser:"Не все предметы можно было вывезти — некоторые пришлось скрывать на месте.",body:"В Павловске наиболее ценные античные статуи и скульптуры муз спрятали в подвале дворца, который затем замуровали. В Петергофе часть парковой скульптуры укрыли в земле. Сотрудники музеев старались сохранить не только сами произведения искусства, но и описи, паспорта предметов и научные архивы. Эти документы позднее помогли искать утраченные ценности и восстанавливать ансамбли.",source:"Ю. З. Кантор; материалы музеев-заповедников «Петергоф» и «Павловск»."}
+{title:"Портрет Александра III",place:"Гатчина · 1870 / 2022",img:"https://commons.wikimedia.org/wiki/Special:FilePath/Zarianko_Al3.jpg",teaser:"Полотно, которое считалось утраченным со времён оккупации, обнаружилось на рижском аукционе.",body:"В феврале 2022 года портрет Александра III в бытность великим князем работы Сергея Зарянко выставили на аукционе Antiqon в Риге. Коллекционер Михаил Маликов приобрёл картину, чтобы подарить её Гатчинскому дворцу. После передачи в музей на обороте полотна обнаружили инвентарный номер Гатчинского дворца-музея 1920-х годов. Это подтвердило, что картина находилась в музейном собрании до войны. До этого её довоенный след терялся с начала оккупации.",source:"Государственный музей-заповедник «Гатчина», сообщение о возвращении портрета от 22 июня 2022 года.",sourceUrl:"https://gatchinapalace.ru/pressa/v_gatchinskiy_dvorets_vernulsya_portret_aleksandra_iii/",credit:"С. К. Зарянко, 1867 · Public Domain Mark",creditUrl:"https://commons.wikimedia.org/wiki/File:Zarianko_Al3.jpg"},
+{title:"Гатчинский дворец",place:"Гатчина · 1944–1985",img:"https://commons.wikimedia.org/wiki/Special:FilePath/The_White_hall_of_the_Gatchina_palace.jpg",teaser:"После пожара от дворца во многом остались стены, а восстановление растянулось на десятилетия.",body:"При отступлении немецких войск Гатчинский дворец был сожжён. Акт специальной комиссии от 10 апреля 1944 года зафиксировал разрушение здания. Подготовительные работы начались в 1944 году: расчищали завалы, проводили обмеры и фотографировали сохранившиеся детали. Полноценная научная реставрация началась в 1976 году, а 8 мая 1985 года для посетителей открылись первые три парадных зала. На фотографии показан уже восстановленный Белый зал.",source:"Материалы музея-заповедника «Гатчина»; акт специальной комиссии от 10 апреля 1944 года.",sourceUrl:"https://gatchinapalace.ru/",credit:"Disco76 · Wikimedia Commons · CC BY-SA 3.0",creditUrl:"https://commons.wikimedia.org/wiki/File:The_White_hall_of_the_Gatchina_palace.jpg"},
+{title:"«Самсон, разрывающий пасть льву»",place:"Петергоф · 1941–1947",img:"https://commons.wikimedia.org/wiki/Special:FilePath/2292._Peterhof._Samson_Fountain.jpg",teaser:"Оригинал знаменитой скульптуры был утрачен. На постамент вернулась новая работа, созданная по фотографиям.",body:"Бронзовый «Самсон» М. И. Козловского был похищен во время оккупации Петергофа. После освобождения скульптор В. Л. Симонов при участии Н. В. Михайлова воссоздал композицию, опираясь на довоенные фотографии и старые эскизы. 14 сентября 1947 года новый «Самсон» снова появился на постаменте Большого каскада. Это не найденный оригинал, а воссозданный памятник.",source:"Государственный музей-заповедник «Петергоф», материалы о возвращении «Самсона».",sourceUrl:"https://www.eng.peterhofmuseum.ru/news/2017/801",credit:"GAlexandrova · Wikimedia Commons · CC BY-SA 4.0",creditUrl:"https://commons.wikimedia.org/wiki/File:2292._Peterhof._Samson_Fountain.jpg"},
+{title:"Треножная ваза Зала войны",place:"Павловск · утрата в годы войны",img:"https://commons.wikimedia.org/wiki/Special:FilePath/8238.1._Hall_of_War_of_Pavlovsk_Palace.jpg",teaser:"Оригинальную вазу из стекла и бронзы не удалось сохранить. Сегодня в зале стоит новый треножник.",body:"Декоративная треножная ваза стояла у второго окна Зала войны с 1810 года. Её изготовили на Императорском стеклянном заводе по рисунку Андрея Воронихина. Во время Великой Отечественной войны оригинал был утрачен. Сейчас в зале установлен новый треножник, созданный мастерами студии Н. Б. Южаковой по аналогии с оригиналом, который сохранился в Зале мира. Поэтому на фотографии показан современный зал и замена, а не исчезнувшая историческая ваза.",source:"Государственный музей-заповедник «Павловск», описание Зала войны.",sourceUrl:"https://en.pavlovskmuseum.ru/about/palace/layout/22/801/",credit:"GAlexandrova · Wikimedia Commons · CC BY-SA 4.0",creditUrl:"https://commons.wikimedia.org/wiki/File:8238.1._Hall_of_War_of_Pavlovsk_Palace.jpg"},
+{title:"Мозаика «Осязание и Обоняние»",place:"Пушкин · возвращена в 2000 году",img:"https://commons.wikimedia.org/wiki/Special:FilePath/Original_Amber_Room%27s_remains_-_panno_Feel_and_Touch_%281751%2C_Hermitage%29_01_by_shakko.JPG",teaser:"Одна из оригинальных флорентийских мозаик Янтарной комнаты нашлась и вернулась в Царское Село.",body:"Мозаика входила в первоначальное убранство Янтарной комнаты Екатерининского дворца. Во время оккупации её вывезли вместе с другими элементами интерьера. В 2000 году мозаика «Осязание и Обоняние» вернулась в музей-заповедник «Царское Село». По данным музея, это единственная из четырёх оригинальных флорентийских мозаик Янтарной комнаты, которую удалось найти и вернуть. Обычно она хранится в музейных фондах и редко выставляется.",source:"Государственный музей-заповедник «Царское Село», материалы об истории Янтарной комнаты.",sourceUrl:"https://tzar.ru/",credit:"Shakko · Wikimedia Commons · CC BY-SA 4.0",creditUrl:"https://commons.wikimedia.org/wiki/File:Original_Amber_Room%27s_remains_-_panno_Feel_and_Touch_(1751,_Hermitage)_01_by_shakko.JPG"},
+{title:"Фонтанная композиция «Нептун»",place:"Петергоф · 1941–1956",img:"https://commons.wikimedia.org/wiki/Special:FilePath/Neptune_Fountain-Peterhof.jpg",teaser:"Сложную бронзовую композицию вернули из Германии по частям — в двенадцати ящиках.",body:"Во время оккупации Петергофа фонтанную группу демонтировали и вывезли в Германию. В 1947 году скульптуры вернулись в СССР в разобранном виде — в двенадцати ящиках общим весом более десяти тонн. В 1956 году «Нептун» установили на прежнем месте. Утраченные фрагменты восполняли позднее, в том числе в 1970-х годах.",source:"Государственный музей-заповедник «Петергоф», история фонтана «Нептун».",sourceUrl:"https://peterhofmuseum.ru/news/2016/671",credit:"Wikimedia Commons · CC BY-SA 3.0",creditUrl:"https://commons.wikimedia.org/wiki/File:Neptune_Fountain-Peterhof.jpg"},
+{title:"«Летящий Меркурий»",place:"Павловск · 1979–2005",img:"https://commons.wikimedia.org/wiki/Special:FilePath/5797._Pavlovsky_Park._Statue_%22Flying_Mercury%22.jpg",teaser:"Скульптуру заметили в Вене по русской надписи на основании. Возвращения пришлось ждать ещё 26 лет.",body:"«Летящий Меркурий» был вывезен из Павловска в годы оккупации. В 1979 году искусствовед С. Андросов увидел скульптуру в Художественно-историческом музее Вены и обратил внимание на русскую надпись на основании. В 2002 году австрийские специалисты подтвердили, что она принадлежала Павловску. В 2005 году скульптуру вернули в Россию, и 7 октября она заняла историческое место в музее-заповеднике.",source:"Министерство культуры РФ, каталог «Культурные ценности — жертвы войны»; материалы музея-заповедника «Павловск».",sourceUrl:"https://lostart.ru/",credit:"Wikimedia Commons · фотография современного памятника",creditUrl:"https://commons.wikimedia.org/wiki/Category:Flying_Hermes_statue_in_Pavlovsk_Park"},
+{title:"Янтарная комната",place:"Пушкин · 1941–2003",img:"https://commons.wikimedia.org/wiki/Special:FilePath/Amber_Room_Catherine_Palace_Tsarskoye_Selo_pre-war_photo.jpg",teaser:"Оригинальные панели увезли в Кёнигсберг. Их следы потерялись, а интерьер пришлось воссоздавать.",body:"Из-за хрупкости янтарных панелей перед оккупацией их не демонтировали. После захвата Екатерининского дворца немецкие специалисты сняли панели и отправили их в Кёнигсберг. В 1944 году после повторного вывоза следы оригинала потерялись. В апреле 2000 года в музей вернулись два предмета первоначального убранства — комод конца XVIII века и флорентийская мозаика «Осязание и Обоняние». Воссозданная российскими мастерами Янтарная комната открылась для посетителей в 2003 году.",source:"Государственный музей-заповедник «Царское Село», история Янтарной комнаты.",sourceUrl:"https://tzar.ru/",credit:"Elizabeth Simpson · The Spoils of War · Public Domain",creditUrl:"https://commons.wikimedia.org/wiki/File:Amber_Room_Catherine_Palace_Tsarskoye_Selo_pre-war_photo.jpg"}
 ];
+function renderStories(){
+ const grid=document.getElementById('storyGrid');
+ stories.forEach((s,i)=>{
+  const card=document.createElement('article');card.className='story';card.id='story-'+i;
+  const visual=document.createElement('div');visual.className='story-visual';
+  const img=document.createElement('img');img.src=s.img;img.alt=s.title;img.loading='lazy';visual.appendChild(img);
+  const lab=document.createElement('div');lab.className='story-label';lab.textContent=s.place;visual.appendChild(lab);
+  const body=document.createElement('div');body.className='story-body';
+  body.innerHTML='<div class="small-caps">ИСТОРИЯ '+String(i+1).padStart(2,'0')+'</div><h3>'+s.title+'</h3><p>'+s.teaser+'</p><details><summary>Открыть историю</summary><div class="story-more"><p>'+s.body+'</p><div class="story-source">'+s.source+' <a href="'+s.sourceUrl+'" target="_blank" rel="noopener">Открыть ↗</a></div><div class="photo-credit">Фото: <a href="'+s.creditUrl+'" target="_blank" rel="noopener">'+s.credit+'</a></div></div></details>';
+  card.appendChild(visual);card.appendChild(body);grid.appendChild(card);
+ });
+}
+renderStories();
 function renderStories(){
  const grid=document.getElementById('storyGrid');
  stories.forEach((s,i)=>{
@@ -510,6 +711,75 @@ function renderStories(){
  });
 }
 renderStories();
+
+
+const artifacts=[
+{id:"portrait",category:"Живопись · Гатчина",title:"Портрет Александра III",question:"Что произошло с портретом, который находился в Гатчинском дворце до войны?",img:"https://commons.wikimedia.org/wiki/Special:FilePath/Zarianko_Al3.jpg",caption:"Портрет цесаревича Александра Александровича · С. К. Зарянко, 1867 · общественное достояние",answers:["Его эвакуировали в тыл и сохранили в музейном собрании","Его обнаружили на аукционе в Риге и вернули Гатчине в 2022 году","Он был уничтожен во время пожара дворца"],correct:1,story:"В феврале 2022 года на аукционе Antiqon в Риге появился «Портрет Александра III в бытность великим князем» 1870 года работы С. К. Зарянко. Коллекционер Михаил Маликов приобрёл его и подарил музею-заповеднику «Гатчина». После поступления картины в музей на обороте обнаружили инвентарный номер Гатчинского дворца-музея 1920-х годов. Это подтвердило, что портрет находился в собрании до войны; его довоенный след потерялся после оккупации.",now:"Портрет вернулся в музей в 2022 году и был направлен на реставрацию. На фото показан портрет Александра Александровича кисти Зарянко как иллюстрация к истории возвращения.",source:"https://gatchinapalace.ru/pressa/v_gatchinskiy_dvorets_vernulsya_portret_aleksandra_iii/"},
+{id:"gatchina",category:"Архитектура · Гатчина",title:"Гатчинский дворец",question:"Что произошло с дворцом при отступлении немецких войск?",img:"https://commons.wikimedia.org/wiki/Special:FilePath/The_White_hall_of_the_Gatchina_palace.jpg",caption:"Белый зал Гатчинского дворца · современный вид восстановленного интерьера",answers:["Дворец сгорел; затем его восстанавливали поэтапно","Дворец разобрали и перевезли в другой город","Здание удалось сохранить без серьёзных повреждений"],correct:0,story:"Перед отступлением немецких войск дворец был заминирован и подготовлен к поджогу. Пожар уничтожил значительную часть интерьеров и исторического убранства. Уже в 1944 году начались подготовительные работы: расчищали завалы, проводили обмеры и фотографировали сохранившиеся детали. Полноценная научная реставрация началась в 1976 году.",now:"8 мая 1985 года посетителям открыли первые три восстановленных парадных зала. На фотографии показан уже восстановленный Белый зал.",source:"https://gatchinapalace.ru/"},
+{id:"samson",category:"Скульптура · Петергоф",title:"«Самсон, разрывающий пасть льву»",question:"Что стало с оригинальной скульптурой Большого каскада?",img:"https://commons.wikimedia.org/wiki/Special:FilePath/2292._Peterhof._Samson_Fountain.jpg",caption:"Современная скульптурная группа «Самсон» в Петергофе",answers:["Оригинал сохранился в подземном тайнике","Оригинал был утрачен, а скульптуру воссоздали по фотографиям и эскизам","Оригинал вывезли и вернули в Петергоф в 1947 году"],correct:1,story:"Оригинальную скульптуру «Самсон» похитили во время оккупации. После освобождения Петергофа В. Л. Симонов при участии Н. В. Михайлова воссоздал её, опираясь на архивные данные, довоенные фотографии и старые эскизы. 14 сентября 1947 года новая скульптура вернулась на свой постамент.",now:"Сегодня на Большом каскаде стоит воссозданная скульптурная группа. Это не найденный оригинал, а восстановленная по документам и изображениям работа.",source:"https://www.eng.peterhofmuseum.ru/news/2017/801"},
+{id:"tripod",category:"Декоративное искусство · Павловск",title:"Треножная ваза Зала войны",question:"Какова судьба оригинальной треножной вазы, стоявшей в Зале войны с 1810 года?",img:"https://commons.wikimedia.org/wiki/Special:FilePath/8238.1._Hall_of_War_of_Pavlovsk_Palace.jpg",caption:"Зал войны Павловского дворца · современный вид; на месте оригинала стоит новый треножник",answers:["Оригинал был утрачен в годы Великой Отечественной войны","Вазу эвакуировали и без изменений вернули во дворец","Вазу вывезли в Германию и возвратили в двенадцати ящиках"],correct:0,story:"Треножная ваза была изготовлена на Императорском стеклянном заводе по рисунку Андрея Воронихина и стояла в Зале войны с 1810 года. Во время Второй мировой войны оригинал был утрачен. Сейчас в зале находится новый треножник, созданный мастерами студии Н. Б. Южаковой по аналогии с оригинальным треножником, который сохранился в Зале мира.",now:"В Зале войны стоит новый треножник. Фотография показывает современный зал, а не утраченную вазу.",source:"https://en.pavlovskmuseum.ru/about/palace/layout/22/801/"},
+{id:"mosaic",category:"Мозаика · Царское Село",title:"Флорентийская мозаика «Осязание и Обоняние»",question:"Что произошло с этой мозаикой из первоначального убранства Янтарной комнаты?",img:"https://commons.wikimedia.org/wiki/Special:FilePath/Original_Amber_Room%27s_remains_-_panno_Feel_and_Touch_%281751%2C_Hermitage%29_01_by_shakko.JPG",caption:"Оригинальная мозаика из убранства Янтарной комнаты · сейчас в собрании Эрмитажа",answers:["Её воссоздали как копию в 2003 году","Её нашли и вернули в Царское Село в 2000 году","Она до сих пор считается безвозвратно утраченной"],correct:1,story:"Флорентийская мозаика «Осязание и Обоняние» была частью первоначального убранства Янтарной комнаты. Её вывезли в годы оккупации. В 2000 году мозаика вернулась в музей-заповедник «Царское Село». По сведениям музея, это единственная из четырёх оригинальных флорентийских мозаик комнаты, которую удалось найти и вернуть.",now:"Оригинальная мозаика сохранилась и находится в музейном собрании; её показывают редко.",source:"https://www.tzar.ru/en/news/1794486108?special_version=Y"},
+{id:"neptune",category:"Скульптурная композиция · Петергоф",title:"Фонтан «Нептун»",question:"В каком виде композиция вернулась из Германии после войны?",img:"https://commons.wikimedia.org/wiki/Special:FilePath/Neptune_Fountain-Peterhof.jpg",caption:"Композиция фонтана «Нептун» в Верхнем саду Петергофа",answers:["В двенадцати ящиках, в разобранном виде","В виде одной бронзовой фигуры без остальных частей","Её пришлось полностью отлить заново"],correct:0,story:"Во время оккупации Петергофа фонтанную группу «Нептун» демонтировали и вывезли в Германию. В 1947 году скульптуры вернулись в разобранном виде — в двенадцати ящиках общим весом более десяти тонн. В 1956 году композицию установили на прежнем месте. Некоторые утраченные фрагменты восполняли позднее.",now:"Фонтан вновь работает в Верхнем саду. Композицию возвращали и восстанавливали по частям; позднее был восполнен ряд утраченных деталей.",source:"https://peterhofmuseum.ru/news/2016/671"},
+{id:"mercury",category:"Скульптура · Павловск",title:"«Летящий Меркурий»",question:"Как удалось установить местонахождение скульптуры?",img:"https://commons.wikimedia.org/wiki/Special:FilePath/5797._Pavlovsky_Park._Statue_%22Flying_Mercury%22.jpg",caption:"Статуя «Летящий Меркурий» в Павловском парке · современный вид",answers:["Её обнаружили в Вене в 1979 году по русской надписи на основании","Её нашли в подвале Павловского дворца сразу после освобождения","Её вернули из Германии в 1947 году вместе с «Нептуном»"],correct:0,story:"Скульптуру вывезли из Павловска в годы оккупации. В 1979 году искусствовед С. Андросов увидел её в Художественно-историческом музее Вены и обратил внимание на русскую надпись на основании. Принадлежность Павловску подтвердили в 2002 году. В 2005 году «Летящий Меркурий» вернули в Россию.",now:"7 октября 2005 года скульптура заняла своё историческое место в Павловском музее-заповеднике.",source:"https://lostart.ru/"},
+{id:"amber",category:"Интерьер · Царское Село",title:"Янтарная комната",question:"Что произошло с оригинальными янтарными панелями?",img:"https://commons.wikimedia.org/wiki/Special:FilePath/Amber_Room_Catherine_Palace_Tsarskoye_Selo_pre-war_photo.jpg",caption:"Янтарная комната на довоенной фотографии · около 1900 года",answers:["Панели вернулись в Екатерининский дворец после войны","Их вывезли в Кёнигсберг; после повторного вывоза в 1944 году следы потерялись","Они были полностью уничтожены во время эвакуации"],correct:1,story:"До оккупации из-за хрупкости янтарных панелей их не демонтировали, а законсервировали в Екатерининском дворце. После захвата дворца немецкие специалисты сняли панели и отправили их в Кёнигсберг. В 1944 году их снова разобрали и вывезли, после чего следы оригинальных панелей потерялись. Два предмета первоначального убранства вернулись в 2000 году, а воссозданная Янтарная комната открылась в 2003 году.",now:"Оригинальные панели до сих пор не найдены. Сегодня посетители видят воссозданный интерьер.",source:"https://tzar.ru/"}
+];
+let artifactIndex=0,artifactScore=0,artifactAnswered=false;
+function renderArtifact(){
+ const a=artifacts[artifactIndex];
+ document.getElementById('artifactCategory').textContent=a.category;
+ document.getElementById('artifactProgress').textContent='Предмет '+(artifactIndex+1)+' из '+artifacts.length;
+ document.getElementById('artifactProgressBar').style.width=(artifactIndex/artifacts.length*100)+'%';
+ const image=document.getElementById('artifactImage');image.src=a.img;image.alt=a.title;
+ document.getElementById('artifactImageCaption').textContent=a.caption;
+ document.getElementById('artifactTitle').textContent=a.title;
+ document.getElementById('artifactQuestion').textContent=a.question;
+ document.getElementById('artifactFeedback').textContent='';
+ document.getElementById('artifactStory').hidden=true;
+ document.getElementById('artifactNext').style.display='none';
+ document.getElementById('artifactScore').textContent='Верных ответов: '+artifactScore;
+ const box=document.getElementById('artifactAnswers');box.innerHTML='';
+ a.answers.forEach((answer,i)=>{
+  const b=document.createElement('button');b.className='artifact-answer';b.textContent=String.fromCharCode(65+i)+'. '+answer;
+  b.addEventListener('click',()=>answerArtifact(i,b));box.appendChild(b);
+ });
+ artifactAnswered=false;
+}
+function answerArtifact(choice,button){
+ if(artifactAnswered)return;artifactAnswered=true;
+ const a=artifacts[artifactIndex];const options=[...document.querySelectorAll('.artifact-answer')];
+ options.forEach((b,i)=>{b.disabled=true;if(i===a.correct)b.classList.add('correct');});
+ if(choice===a.correct){artifactScore++;document.getElementById('artifactFeedback').textContent='Верно. Ты разгадал судьбу предмета.';}
+ else{button.classList.add('wrong');document.getElementById('artifactFeedback').textContent='Не совсем. Правильный ответ подсвечен — теперь узнай, что произошло на самом деле.';}
+ document.getElementById('artifactScore').textContent='Верных ответов: '+artifactScore;
+ document.getElementById('artifactStoryText').textContent=a.story;
+ document.getElementById('artifactNow').textContent=a.now;
+ const src=document.getElementById('artifactSource');src.href=a.source;
+ document.getElementById('artifactStory').hidden=false;
+ document.getElementById('artifactProgressBar').style.width=((artifactIndex+1)/artifacts.length*100)+'%';
+ const next=document.getElementById('artifactNext');next.style.display='inline-flex';next.textContent=artifactIndex===artifacts.length-1?'Посмотреть результат →':'Следующий предмет →';
+}
+function restartArtifactGame(){
+ artifactIndex=0;artifactScore=0;artifactAnswered=false;
+ document.getElementById('artifactGame').querySelector('.artifact-layout').style.display='grid';
+ document.querySelector('.artifact-game-top').style.display='flex';
+ document.querySelector('.artifact-progress').style.display='block';
+ document.getElementById('artifactFinish').hidden=true;
+ renderArtifact();
+}
+document.getElementById('artifactNext').addEventListener('click',()=>{
+ if(!artifactAnswered)return;
+ if(artifactIndex<artifacts.length-1){artifactIndex++;renderArtifact();}
+ else{
+  document.getElementById('artifactGame').querySelector('.artifact-layout').style.display='none';
+  document.querySelector('.artifact-game-top').style.display='none';
+  document.querySelector('.artifact-progress').style.display='none';
+  document.getElementById('artifactFinish').hidden=false;
+  document.getElementById('artifactFinalScore').textContent=artifactScore+' / '+artifacts.length;
+  document.getElementById('artifactFinalTitle').textContent=artifactScore>=7?'Ты хорошо знаешь судьбу коллекций':artifactScore>=4?'Часть историй уже знакома':'Теперь ты знаешь больше о судьбе экспонатов';
+ }
+});
+document.getElementById('artifactRestart').addEventListener('click',restartArtifactGame);
+renderArtifact();
 
 const questions=[
 {cat:"Спасти",q:"Сколько музейных предметов удалось эвакуировать из Гатчинского дворца?",a:["6 500","11 929","12 932","40 765"],correct:1,why:"Из Гатчинского дворца вывезли 11 929 предметов. Более восьми тысяч отправили в Сарапул, около трёх тысяч — в Ленинград."},
