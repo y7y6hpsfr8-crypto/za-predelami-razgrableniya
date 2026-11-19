@@ -800,9 +800,11 @@ const exhibits=[
 
 let exhibitIndex=0,exhibitScore=0,exhibitAnswered=false;
 const exhibitById=Object.fromEntries(exhibits.map((item,index)=>[item.id,index]));
+const exhibitDeepLink=new URLSearchParams(window.location.search).has("item");
 function updateExhibitUrl(){
+ if(!exhibitDeepLink)return;
  const item=exhibits[exhibitIndex],url=new URL(window.location.href);
- url.searchParams.set("item",item.id);url.hash="stories";
+ url.searchParams.set("item",item.id);
  window.history.replaceState({},"",url.toString());
 }
 function renderExhibit(){
@@ -872,7 +874,7 @@ document.getElementById("exhibitNext").addEventListener("click",()=>{
   document.getElementById("exhibitFinish").hidden=false;
   document.getElementById("exhibitFinalScore").textContent=exhibitScore+" / "+exhibits.length;
   document.getElementById("exhibitFinalTitle").textContent=exhibitScore===5?"Ты раскрыл все пять историй":exhibitScore>=3?"Ты узнал судьбу большей части коллекции":"Теперь истории этих предметов тебе знакомы";
-  const url=new URL(window.location.href);url.searchParams.delete("item");url.hash="stories";window.history.replaceState({},"",url.toString());
+  const url=new URL(window.location.href);url.searchParams.delete("item");url.hash="";window.history.replaceState({},"",url.toString());
  }
 });
 document.getElementById("exhibitRestart").addEventListener("click",restartExhibitGame);
