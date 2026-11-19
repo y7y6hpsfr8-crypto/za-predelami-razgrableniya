@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#11110f">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<title>QR-коды экспозиции — За пределами разграбления</title>
+<style>
+:root{--bg:#11110f;--paper:#efe7d8;--muted:#877f72;--gold:#b89a60;--line:#d8c092}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--paper);font:15px/1.55 Arial,sans-serif}
+.page{max-width:1120px;margin:0 auto;padding:42px 34px 60px}
+header{border-bottom:1px solid rgba(216,192,146,.28);padding-bottom:26px;margin-bottom:28px}
+.kicker{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+h1{font:500 clamp(34px,5vw,54px)/1 Georgia,serif;margin:12px 0}
+header p{max-width:720px;color:#b6ad9d;font-size:13px;margin:10px 0 0}
+.actions{display:flex;justify-content:flex-end;margin:0 0 22px}
+button{background:var(--gold);border:0;color:#171611;padding:12px 18px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.qr-card{border:1px solid rgba(216,192,146,.25);padding:22px;background:#191915;display:grid;grid-template-columns:1fr 170px;column-gap:14px;align-items:center;break-inside:avoid}
+.qr-number{grid-column:1/-1;color:var(--gold);font-size:9px;letter-spacing:.18em}
+.qr-card h2{font:500 26px/1.07 Georgia,serif;margin:10px 0 5px}
+.qr-card p{font-size:11px;color:#aaa18f;margin:0}
+.qr-card img{grid-column:2;grid-row:2/span 3;width:100%;height:auto;background:#fff;padding:7px;display:block}
+.qr-link{grid-column:1;margin-top:12px;font-size:10px}
+.qr-link a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:25px;color:#8f8778;font-size:10px;border-top:1px solid rgba(216,192,146,.22);padding-top:16px}
+@media(max-width:720px){.page{padding:24px 16px}.grid{grid-template-columns:1fr}.qr-card{grid-template-columns:1fr 130px}.qr-card h2{font-size:23px}}
+@media print{
+ @page{size:A4;margin:12mm}
+ body{background:#fff;color:#151515}
+ .page{max-width:none;padding:0}
+ header{border-color:#999;padding-bottom:12px;margin-bottom:14px}
+ .kicker,.qr-number{color:#5d4b2a}
+ h1{font-size:29px;color:#111}
+ header p{color:#444;font-size:10px}
+ .actions{display:none}
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8mm}
+ .qr-card{background:#fff;color:#111;border:1px solid #aaa;padding:7mm;grid-template-columns:1fr 36mm;column-gap:4mm}
+ .qr-card h2{font-size:18px;color:#111}
+ .qr-card p,.qr-link{color:#333;font-size:9px}
+ .qr-card img{width:36mm;padding:1mm;background:#fff}
+ .qr-link a{color:#222}
+ footer{color:#444}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+ <div class="kicker">За пределами разграбления · Литературный багаж</div>
+ <h1>Пять историй культурного наследия</h1>
+ <p>Печатный лист QR-кодов для физической экспозиции. Каждый код открывает интерактивную игру непосредственно на странице соответствующего экспоната. Перед печатью убедитесь, что QR-изображения загрузились.</p>
+</header>
+<div class="actions"><button type="button" onclick="window.print()">Печать листа QR-кодов</button></div>
+<div class="grid">
+<article class="qr-card">
+ <div class="qr-number">ЭКСПОНАТ · 01</div>
+ <h2>Портрет Александра III</h2>
+ <p>Картина · Сергей Зарянко, 1870 · Гатчина</p>
+ <img src="https://api.qrserver.com/v1/create-qr-code/?size=900x900&amp;format=svg&amp;ecc=H&amp;margin=12&amp;data=https%3A%2F%2Fy7y6hpsfr8-crypto.github.io%2Fza-predelami-razgrableniya%2F%3Fitem%3Dportrait%23stories" alt="QR-код для экспоната: Портрет Александра III">
+ <div class="qr-link"><a href="https://y7y6hpsfr8-crypto.github.io/za-predelami-razgrableniya/?item=portrait#stories">Открыть эту историю на сайте</a></div>
+</article>
+<article class="qr-card">
+ <div class="qr-number">ЭКСПОНАТ · 02</div>
+ <h2>Гатчинский дворец</h2>
+ <p>Памятник архитектуры · Гатчина</p>
+ <img src="https://api.qrserver.com/v1/create-qr-code/?size=900x900&amp;format=svg&amp;ecc=H&amp;margin=12&amp;data=https%3A%2F%2Fy7y6hpsfr8-crypto.github.io%2Fza-predelami-razgrableniya%2F%3Fitem%3Dgatchina-palace%23stories" alt="QR-код для экспоната: Гатчинский дворец">
+ <div class="qr-link"><a href="https://y7y6hpsfr8-crypto.github.io/za-predelami-razgrableniya/?item=gatchina-palace#stories">Открыть эту историю на сайте</a></div>
+</article>
+<article class="qr-card">
+ <div class="qr-number">ЭКСПОНАТ · 03</div>
+ <h2>«Самсон, разрывающий пасть льву»</h2>
+ <p>Скульптура · Большой каскад · Петергоф</p>
+ <img src="https://api.qrserver.com/v1/create-qr-code/?size=900x900&amp;format=svg&amp;ecc=H&amp;margin=12&amp;data=https%3A%2F%2Fy7y6hpsfr8-crypto.github.io%2Fza-predelami-razgrableniya%2F%3Fitem%3Dsamson%23stories" alt="QR-код для экспоната: «Самсон, разрывающий пасть льву»">
+ <div class="qr-link"><a href="https://y7y6hpsfr8-crypto.github.io/za-predelami-razgrableniya/?item=samson#stories">Открыть эту историю на сайте</a></div>
+</article>
+<article class="qr-card">
+ <div class="qr-number">ЭКСПОНАТ · 04</div>
+ <h2>Мозаика «Осязание и Обоняние»</h2>
+ <p>Флорентийская мозаика · Царское Село</p>
+ <img src="https://api.qrserver.com/v1/create-qr-code/?size=900x900&amp;format=svg&amp;ecc=H&amp;margin=12&amp;data=https%3A%2F%2Fy7y6hpsfr8-crypto.github.io%2Fza-predelami-razgrableniya%2F%3Fitem%3Damber-mosaic%23stories" alt="QR-код для экспоната: Мозаика «Осязание и Обоняние»">
+ <div class="qr-link"><a href="https://y7y6hpsfr8-crypto.github.io/za-predelami-razgrableniya/?item=amber-mosaic#stories">Открыть эту историю на сайте</a></div>
+</article>
+<article class="qr-card">
+ <div class="qr-number">ЭКСПОНАТ · 05</div>
+ <h2>Треножная ваза Зала войны</h2>
+ <p>Декоративно-прикладное искусство · Павловск</p>
+ <img src="https://api.qrserver.com/v1/create-qr-code/?size=900x900&amp;format=svg&amp;ecc=H&amp;margin=12&amp;data=https%3A%2F%2Fy7y6hpsfr8-crypto.github.io%2Fza-predelami-razgrableniya%2F%3Fitem%3Dtripod-vase%23stories" alt="QR-код для экспоната: Треножная ваза Зала войны">
+ <div class="qr-link"><a href="https://y7y6hpsfr8-crypto.github.io/za-predelami-razgrableniya/?item=tripod-vase#stories">Открыть эту историю на сайте</a></div>
+</article>
+</div>
+<footer>QR-коды ведут на публичную страницу проекта GitHub Pages. При сканировании откроется нужный экспонат; после ответа посетитель увидит документальную историю, фотографии и источники.</footer>
+</div>
+</body>
+</html>
