@@ -883,11 +883,9 @@ document.getElementById("exhibitNext").addEventListener("click",()=>{
  if(exhibitIndex<exhibits.length-1){
   const game=document.getElementById("exhibitGame");
   exhibitIndex++;renderExhibit();
-  requestAnimationFrame(()=>{
-   const topAfter=game.getBoundingClientRect().top;
-   const headerOffset=window.matchMedia("(max-width:700px)").matches?78:88;
-   window.scrollTo({top:window.scrollY+topAfter-headerOffset,behavior:"auto"});
-  });
+  setTimeout(()=>{
+   game.scrollIntoView({block:"start",behavior:"auto"});
+  },120);
  }
  else{
   document.getElementById("exhibitPlay").style.display="none";
