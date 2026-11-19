@@ -880,7 +880,15 @@ function startExhibitGame(){
 }
 document.getElementById("exhibitNext").addEventListener("click",()=>{
  if(!exhibitAnswered)return;
- if(exhibitIndex<exhibits.length-1){exhibitIndex++;renderExhibit();}
+ if(exhibitIndex<exhibits.length-1){
+  const game=document.getElementById("exhibitGame");
+  const topBefore=game.getBoundingClientRect().top;
+  exhibitIndex++;renderExhibit();
+  requestAnimationFrame(()=>{
+   const topAfter=game.getBoundingClientRect().top;
+   window.scrollTo(0,window.scrollY+topAfter-topBefore);
+  });
+ }
  else{
   document.getElementById("exhibitPlay").style.display="none";
   document.getElementById("exhibitFinish").hidden=false;
